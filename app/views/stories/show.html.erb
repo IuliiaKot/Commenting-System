@@ -1,8 +1,10 @@
 <div class="container">
-  <h4><%= @story.title%></h4>
-  <p><%= @story.content %></p>
-  <br>
-  <small>Submitted <%= time_ago_in_words(@story.created_at)%> ago</small>
+  <section class="show-one-story">
+    <h4><%= @story.title%></h4>
+      <p><%= @story.content %></p>
+    <br>
+    <small>Submitted <%= time_ago_in_words(@story.created_at)%> ago</small>
+  </section>
 
   <hr>
   <div class="">
@@ -14,7 +16,7 @@
     <% end %>
 
     <div>
-        <%= render(partial: 'comments/comment', collection: @story.comments.order(created_at: :desc))%>    
+        <%= render(partial: 'comments/comment', collection: @story.comments.order(created_at: :desc))%>
     </div>
   </div>
 </div>

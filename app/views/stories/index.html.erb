@@ -3,12 +3,11 @@
     <%= render(partial: 'partials/errors')%>
   <% end %>
 
-  <%= link_to('Post a new strory', new_story_path)%>
-  <section>
+  <section class='col-md-12'>
     <% @stories.each do |story| %>
-      <article>
+      <article class="one-story">
         <h6><%= story.title%></h6>
-        <%= link_to("Show page", story)%>
+        <small><%= link_to("Show page", story) %></small>
       </article>
     <% end %>
   </section>
