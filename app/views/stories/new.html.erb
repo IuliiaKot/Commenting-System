@@ -1,13 +1,13 @@
-<div>
+<div class="container">
   <%= form_for @story do |f| %>
-    <div>
+    <div class="form-group">
       <%= f.label :title%>
-      <%= f.text_field :title%>
+      <%= f.text_field :title, class: "form-control"%>
     </div>
 
-    <div>
+    <div class="form-group">
       <%= f.label :content %>
-      <%= f.text_area :content %>
+      <%= f.text_area :content, class: "form-control" %>
     </div>
 
     <%= f.submit "Create Story"%>

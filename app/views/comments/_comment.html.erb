@@ -3,8 +3,8 @@
   <small>Posted <%= time_ago_in_words(comment.created_at)%> ago</small>
 
   <%= form_for [comment, Comment.new] do |f| %>
-    <%= f.text_area :body, placeholder: "Add reply"%>
-    <%= f.submit "Reply"%>
+    <%= f.text_area :body, placeholder: "Add reply", class: "form-control"%>
+    <%= f.submit "Reply", class: "btn btn-primary"%>
   <% end %>
 
   <ul>

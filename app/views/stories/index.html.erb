@@ -4,10 +4,12 @@
   <% end %>
 
   <%= link_to('Post a new strory', new_story_path)%>
-  <ul>
+  <section>
     <% @stories.each do |story| %>
-      <li><%= story.title%></li>
-      <%= link_to("Show page", story)%>
+      <article>
+        <h6><%= story.title%></h6>
+        <%= link_to("Show page", story)%>
+      </article>
     <% end %>
-  </ul>
+  </section>
 </div>
