@@ -1,4 +1,9 @@
 <div  class="container">
+  <% if @errors %>
+    <%= render(partial: 'partials/errors')%>
+  <% end %>
+
+  <%= link_to('Post a new strory', new_story_path)%>
   <ul>
     <% @stories.each do |story| %>
       <li><%= story.title%></li>

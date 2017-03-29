@@ -1,0 +1,15 @@
+<div>
+  <%= form_for @story do |f| %>
+    <div>
+      <%= f.label :title%>
+      <%= f.text_field :title%>
+    </div>
+
+    <div>
+      <%= f.label :content %>
+      <%= f.text_area :content %>
+    </div>
+
+    <%= f.submit "Create Story"%>
+  <% end %>
+</div>
