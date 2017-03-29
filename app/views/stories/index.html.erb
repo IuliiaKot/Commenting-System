@@ -1,0 +1,8 @@
+<div  class="container">
+  <ul>
+    <% @stories.each do |story| %>
+      <li><%= story.title%></li>
+      <%= link_to("Show page", story)%>
+    <% end %>
+  </ul>
+</div>

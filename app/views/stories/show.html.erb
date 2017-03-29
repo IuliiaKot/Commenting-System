@@ -1,0 +1,18 @@
+<div>
+  <h4><%= @story.title%></h4>
+  <p><%= @story.content %></p>
+  <br>
+  <small>Submitted <%= time_ago_in_words(@story.created_at)%> ago</small>
+</div>
+<div>
+  Comments:
+
+  <%= form_for [@story, Comment.new] do |f| %>
+    <%= f.text_area :body, placeholder: "Add comment here"%>
+    <%= f.submit "Add comment"%>
+  <% end %>
+
+  <div>
+    <%= render(partial: 'comments/comment', collection: @story.comments)%>
+  </div>
+</div>
