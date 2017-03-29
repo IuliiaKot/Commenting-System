@@ -1,3 +1,4 @@
+
 <li>
   <article class="comments">
     <%= comment.body %> -
@@ -8,8 +9,8 @@
       <%= link_to "Reply", "#", class: 'replay-link'%>
     </div>
   </article>
+
   <ul>
       <%= render partial: 'comments/comment', collection: comment.comments %>
   </ul>
-
 </li>

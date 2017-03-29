@@ -14,7 +14,7 @@
     <% end %>
 
     <div>
-      <%= render(partial: 'comments/comment', collection: @story.comments)%>
+        <%= render(partial: 'comments/comment', collection: @story.comments.order(created_at: :desc))%>    
     </div>
   </div>
 </div>
