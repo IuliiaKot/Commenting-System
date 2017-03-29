@@ -1,0 +1,4 @@
+<%= form_for [comment, Comment.new], class: "hide" do |f| %>
+  <%= f.text_area :body, placeholder: "Add reply", class: "form-control"%>
+  <%= f.submit "Reply", class: "btn btn-primary"%>
+<% end %>

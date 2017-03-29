@@ -1,13 +1,15 @@
 <li>
-  <%= comment.body %> -
-  <small>Posted <%= time_ago_in_words(comment.created_at)%> ago</small>
+  <article class="comments">
+    <%= comment.body %> -
+    <small>Posted <%= time_ago_in_words(comment.created_at)%> ago</small>
 
-  <%= form_for [comment, Comment.new] do |f| %>
-    <%= f.text_area :body, placeholder: "Add reply", class: "form-control"%>
-    <%= f.submit "Reply", class: "btn btn-primary"%>
-  <% end %>
-
+    <div class="comment-form">
+      <%= render partial: 'comments/form', locals: {comment:  comment} %>
+      <%= link_to "Reply", "#", class: 'replay-link'%>
+    </div>
+  </article>
   <ul>
       <%= render partial: 'comments/comment', collection: comment.comments %>
   </ul>
+
 </li>
